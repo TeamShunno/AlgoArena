@@ -1,0 +1,111 @@
+@charset "utf-8";
+html, body, p {
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+html {
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background: #DCE2F2;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    color: #555;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h1.chapter {
+    border-bottom: 1px solid #ccc;
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, .1);
+}
+
+h2 {
+    font-size: 1.7em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+h4, h5, h6 {
+    font-size: 1.3em;
+}
+
+a, a:hover, a:active, a:visited {
+    transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    text-decoration: none !important;
+    outline: none !important;
+}
+
+a, a:visited {
+    color: #424242;
+    font-size: 1em;
+}
+
+a:hover, a:active {
+    color: #212121;
+    text-decoration: underline;
+}
+
+strong {
+    color: black;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+}
+
+p {}
+
+pre {
+    font-family: monospace;
+}
+
+
+/*
+Index boxes
+*/
+
+.square-box {
+    float: left;
+    position: relative;
+    width: 50%;
+    overflow: hidden;
+}
+
+.square-box:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+.square-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    color: white;
+    text-align: center;
+    margin: 10px;
+    background: #FFFFFF;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    /* align horizontal */
+    align-items: center;
+    /* align vertical */
+}
+
+.square-content p {
+    color: green;
+    font-weight: bold;
+    font-size: 1.5em;
+}
