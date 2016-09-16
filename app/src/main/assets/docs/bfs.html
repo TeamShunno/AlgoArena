@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/common.js"></script>
+    <script></script>
+    <title>Algorithm Arena</title>
+</head>
+
+<body>
+    <h1 class="chapter">Bredth First Search</h1>
+    <div class="intro">
+        <p>বিএফএস এর কাজ হলো গ্রাফে একটা নোড থেকে আরেকটা নোডে যাবার শর্টেস্ট পাথ বের করা। বিএফএস কাজ করবে শুধুমাত্র আন-ওয়েটেড গ্রাফের ক্ষেত্রে, তারমানে সবগুলো এজের কস্ট হবে।</p>
+        <p>বিএফএস অ্যালগোরিদমটা কাজ করে নিচের ধারণারগুলোর উপর ভিত্তি করে:</p>
+        <p>১. কোনো নোডে ১ বারের বেশি যাওয়া যাবেনা</p>
+        <p>২. সোর্স নোড অর্থাৎ যে নোড থেকে শুরু করছি সেটা ০ নম্বর লেভেলে অবস্থিত। </p>
+        <p>৩. সোর্স বা ‘লেভেল ০’ নোড থেকে সরাসরি যেসব নোডে যাওয়া যায় তারা সবাই ‘লেভেল ১’ নোড। </p>
+        <p>৪. ‘লেভেল ১’ নোডগুলো থেকে সরাসরি যেসব নোডে যাওয়া যায় তারা সবাই ‘লেভেল ২’ নোড। এভাবে লেভেল এক এক করে বাড়তে থাকবে। </p>
+        <p>৫. যে নোড যত নম্বর লেভেলে,সোর্স থেকে তার শর্টেস্ট পথের দৈর্ঘ্য তত। উপরে লেখাগুলো পুরোপুরি না বুঝলে আমরা একটা উদাহরণ দেখে বাকিটা পরিস্কার করব।</p>
+    </div>
+    <h2 class="def-title">Pseudo Code</h2>
+    <pre class="pseudo-code">
+<code>procedure BFS(G,source):
+    Q=queue(), level[]=infinity
+        Q.enqueue(source)
+            level[source]=0
+            while Q is not empty
+                u ← Q.pop()
+                for all edges from u to v in G.adjacentEdges(v) do
+                if level[v] = infinity:
+                    level[u]=level[v]+1;
+                    Q.enqueue(v)
+                end if
+            end for
+        end while
+    Return distance;</code>
+</pre>
+    <h2 class="def-title">Explanation</h2>
+    <div class="explanation">
+        <p>Line by line sudocode explanation</p>
+    </div>
+    <h2 class="def-title">Complexity</h2>
+    <div class="complexity">
+        <p>All complexity</p>
+    </div>
+    <h2 class="def-title">Help Link</h2>
+    <div class="help-links">
+      <ul>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 2</a></li>
+        <li><a href="#">Link 3</a></li>
+      </ul>
+    </div>
+</body>
+
+</html>
